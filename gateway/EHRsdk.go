@@ -18,6 +18,7 @@ import (
 	"path"
 	"time"
 
+	"github.com/ZihuaZhang/redactable/src"
 	"github.com/hyperledger/fabric-gateway/pkg/client"
 	"github.com/hyperledger/fabric-gateway/pkg/identity"
 	"google.golang.org/grpc"
@@ -73,7 +74,7 @@ func main() {
 	mspRedact, _ := abe.BooleanToMSP("((0 AND 1) OR (2 AND 3)) AND 5", false)
 	network := gw.GetNetwork(channelName)
 	contract := network.GetContract(chaincodeName)
-	pk, _, err := NewFAME().GenerateMasterKeys()
+	pk, _, err := src.NewFAME().GenerateMasterKeys()
 	// 生成AES对称密钥
 	key24 := "123456781234567812345678"
 	// 对称密钥AES加密病历
@@ -86,7 +87,7 @@ func main() {
 	cid := "QmYpLtwy3gHbg9Jh8ae5g11aQeh7P69KEWttdS7p3NB12j"
 	// 对对称密钥进行FAME加密
 	keyBigInt, _ := new(big.Int).SetString(key24, 10)
-	cipher, err := NewFAME().Encrypt(keyBigInt, mspView, pk)
+	cipher, err := src.NewFAME().Encrypt(keyBigInt, mspView, pk)
 	if err != nil {
 		return
 	}
