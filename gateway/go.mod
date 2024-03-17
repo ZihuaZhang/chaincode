@@ -1,6 +1,6 @@
 module gateway
 
-go 1.22
+go 1.21
 
 require (
 	github.com/fentec-project/bn256 v0.0.0-20190726093940-0d0fc8bfeed0
