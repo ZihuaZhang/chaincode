@@ -1,4 +1,4 @@
-module chaincode
+module github.com/ZihuaZhang/chaincode
 
 go 1.21
 
