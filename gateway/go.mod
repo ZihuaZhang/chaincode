@@ -6,7 +6,6 @@ toolchain go1.22.0
 
 require (
 	github.com/ZihuaZhang/redactable v1.0.1
-	github.com/fentec-project/bn256 v0.0.0-20190726093940-0d0fc8bfeed0
 	github.com/fentec-project/gofe v0.0.0-20220829150550-ccc7482d20ef
 	github.com/hyperledger/fabric-gateway v1.5.0
 	github.com/wumansgy/goEncrypt v1.1.0
