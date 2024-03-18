@@ -65,7 +65,7 @@ func main() {
 		chaincodeName = ccname
 	}
 
-	channelName := "channelzzh"
+	channelName := "channel356"
 	if cname := os.Getenv("CHANNEL_NAME"); cname != "" {
 		channelName = cname
 	}
