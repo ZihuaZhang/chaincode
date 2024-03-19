@@ -60,12 +60,12 @@ func main() {
 	defer gw.Close()
 
 	// Override default values for chaincode and channel name as they may differ in testing contexts.
-	chaincodeName := "basichhh"
+	chaincodeName := "basic188"
 	if ccname := os.Getenv("CHAINCODE_NAME"); ccname != "" {
 		chaincodeName = ccname
 	}
 
-	channelName := "channelhhh"
+	channelName := "channel188"
 	if cname := os.Getenv("CHANNEL_NAME"); cname != "" {
 		channelName = cname
 	}
@@ -94,7 +94,7 @@ func main() {
 	ciperJSON, err := json.Marshal(cipher)
 	pkJSON, err := json.Marshal(pk)
 	mspRedactJSON, err := json.Marshal(mspRedact)
-	_, err = contract.SubmitTransaction("uploadEHR", "true", string(pkJSON), string(mspRedactJSON), cid, string(ciperJSON))
+	_, err = contract.SubmitTransaction("UploadEHR", "true", string(pkJSON), string(mspRedactJSON), cid, string(ciperJSON))
 	if err != nil {
 		return
 	}
