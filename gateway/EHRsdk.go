@@ -60,12 +60,12 @@ func main() {
 	defer gw.Close()
 
 	// Override default values for chaincode and channel name as they may differ in testing contexts.
-	chaincodeName := "basic996"
+	chaincodeName := "basickkk"
 	if ccname := os.Getenv("CHAINCODE_NAME"); ccname != "" {
 		chaincodeName = ccname
 	}
 
-	channelName := "channel996"
+	channelName := "channelkkk"
 	if cname := os.Getenv("CHANNEL_NAME"); cname != "" {
 		channelName = cname
 	}
