@@ -20,7 +20,7 @@ type EHR struct {
 
 var totalNum = 0
 
-func (s *SmartContract) uploadEHR(ctx contractapi.TransactionContextInterface, isRedactable string, pk string, msp string, locationIPFS string, keyCiper string) (string, error) {
+func (s *SmartContract) UploadEHR(ctx contractapi.TransactionContextInterface, isRedactable string, pk string, msp string, locationIPFS string, keyCiper string) (string, error) {
 	if isRedactable == "" || pk == "" || msp == "" {
 		return "", nil
 	}
@@ -38,7 +38,7 @@ func (s *SmartContract) uploadEHR(ctx contractapi.TransactionContextInterface, i
 	return aEHR.UserID, err
 }
 
-func (s *SmartContract) queryEHR(ctx contractapi.TransactionContextInterface, userID string) (*EHR, error) {
+func (s *SmartContract) QueryEHR(ctx contractapi.TransactionContextInterface, userID string) (*EHR, error) {
 	aEHRJSON, err := ctx.GetStub().GetState(userID)
 	if err != nil {
 		return nil, err
